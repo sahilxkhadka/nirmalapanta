@@ -56,7 +56,10 @@ body {
 .quotes-wrapper {
     z-index: 2;
     margin-top: 2rem;
-    height: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .quotes-wrapper h1 {
     font-size: 2rem;
