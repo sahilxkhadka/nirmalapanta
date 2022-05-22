@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+    height: 100vh;
+}
+.container {
+    height: 100%;
+    background-image: url(./thumb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    display: grid;
+    place-content: center;
+    color: rgb(252, 239, 239);
+}
+.container::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom right,#000000,#000000);
+    opacity: .7; 
+    offset: 0;
+    z-index: 1;
+}
+.main-text-wrapper {
+    min-width: 100vw;
+    z-index: 2;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.main-text-wrapper  h1 {
+    line-height: 1.125;
+}
+.main-text-wrapper > h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+.text-wrapper-info h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+#date {
+    font-size: 2rem;
+    text-align: center;
+}
+.quotes-wrapper {
+    z-index: 2;
+    margin-top: 2rem;
+    height: 100px;
+}
+.quotes-wrapper h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+@media screen and (max-width: 650px) {
+    * {
+        font-size: 50%;
+    }
+    .container {
+        background-size: contain;
+        background-position: right;
+    }
+    .main-text-wrapper {
+        flex-direction: column;
+    }
+    .main-text-wrapper h1 {
+        text-align: center;
+    }
+    .quotes-wrapper h1 {
+        font-size: 1.8rem;
+    }
+    #date {
+        font-size: 1.8rem;
+    }
+    .main-text-wrapper > h1 {
+        font-size: 4rem;
+    }
+    .text-wrapper-info h1 {
+        font-size: 2.5rem;
+    }
+}
