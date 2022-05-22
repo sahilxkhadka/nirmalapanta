@@ -32,16 +32,17 @@ body {
     min-width: 100vw;
     z-index: 2;
     display: flex;
-    gap: 1.5rem;
     align-items: center;
     justify-content: center;
 }
 .main-text-wrapper  h1 {
-    line-height: 1.125;
+    line-height: 1.5;
 }
 .main-text-wrapper > h1 {
     font-size: 5rem;
     font-weight: 700;
+    min-width: 4ch;
+
 }
 .text-wrapper-info h1 {
     font-size: 3rem;
@@ -78,12 +79,6 @@ body {
         background-image: url("./nirmala.jpg");
         background-size: cover;
         background-position: center;
-    }
-    .main-text-wrapper {
-        flex-direction: column;
-    }
-    .main-text-wrapper h1 {
-        text-align: center;
     }
     .quotes-wrapper h1 {
         font-size: 1.8rem;

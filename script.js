@@ -1,10 +1,13 @@
+const showDays = document.getElementById("days-count")
+const showDate = document.querySelector('#date')
+
 const originalDaysCount = 1456
 const date1 = new Date('5/22/2022');
 const date2 = new Date();
 const diffTime = Math.abs(date2 - date1);
 const diffDays = originalDaysCount + Math.round(diffTime / (1000 * 60 * 60 * 24));
-document.getElementById('days-count').innerHTML = diffDays;
-document.getElementById("date").innerText = new Date().toLocaleDateString()
+showDate.innerText = new Date().toLocaleDateString()
+showDays.innerText = 0
 
 var typed = new Typed("#quote", {
     strings: ["Listen when a girl says NO",
@@ -19,3 +22,15 @@ var typed = new Typed("#quote", {
     fadeOut: true,
     loop: true
 })
+
+function updateCounter (){
+    const counterStart = +  showDays.innerText
+    const incrementValue = diffDays / 50
+    if (counterStart < diffDays) {
+        showDays.innerText = `${Math.round(counterStart + incrementValue)}`
+        setTimeout(updateCounter, 90)
+    } else {
+        showDays.innerText = diffDays
+    }
+}
+updateCounter()
