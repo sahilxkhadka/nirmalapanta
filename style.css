@@ -42,7 +42,6 @@ body {
     font-size: 5rem;
     font-weight: 700;
     min-width: 4ch;
-
 }
 .text-wrapper-info h1 {
     font-size: 3rem;
@@ -52,7 +51,6 @@ body {
 }
 #date {
     font-size: 2rem;
-    text-align: center;
 }
 .quotes-wrapper {
     z-index: 2;
