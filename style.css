@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
+body {
+    height: 100vh;
+}
 .container {
     height: 100%;
     background-image: url(./thumb.jpg);
@@ -21,7 +24,7 @@
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to bottom right,#000000,#000000);
-    opacity: .6; 
+    opacity: .7; 
     offset: 0;
     z-index: 1;
 }
@@ -62,12 +65,20 @@
     text-align: center;
 }
 @media screen and (max-width: 650px) {
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    html {
+        height: -webkit-fill-available;
+    }
     * {
         font-size: 50%;
     }
     .container {
-        background-size: contain;
-        background-position: right;
+        background-image: url("./nirmala.jpg");
+        background-size: cover;
+        background-position: center;
     }
     .main-text-wrapper {
         flex-direction: column;
@@ -77,8 +88,6 @@
     }
     .quotes-wrapper h1 {
         font-size: 1.8rem;
-        max-width: 80%;
-        margin: 0 auto;
     }
     #date {
         font-size: 1.8rem;
