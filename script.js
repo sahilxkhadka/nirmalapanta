@@ -19,3 +19,4 @@ var typed = new Typed("#quote",{
     fadeOut: true,
     loop:true
 })
+document.body.style.height = window.innerHeight
