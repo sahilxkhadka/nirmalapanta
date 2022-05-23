@@ -1,11 +1,12 @@
 const showDays = document.getElementById("days-count")
 const showDate = document.querySelector('#date')
 
-const originalDaysCount = 1456
+const originalDaysCount = 1457
 const date1 = new Date('5/22/2022');
 const date2 = new Date();
 const diffTime = Math.abs(date2 - date1);
 const diffDays = originalDaysCount + Math.round(diffTime / (1000 * 60 * 60 * 24));
+console.log(diffDays)
 showDate.innerText = new Date().toLocaleDateString()
 showDays.innerText = 0
 
