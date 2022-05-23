@@ -1,12 +1,7 @@
 const showDays = document.getElementById("days-count")
 const showDate = document.querySelector('#date')
 
-const originalDaysCount = 1457
-const date1 = new Date('5/22/2022');
-const date2 = new Date();
-const diffTime = Math.abs(date2 - date1);
-const diffDays = originalDaysCount + Math.round(diffTime / (1000 * 60 * 60 * 24));
-console.log(diffDays)
+let diffDays
 showDate.innerText = new Date().toLocaleDateString()
 showDays.innerText = 0
 
@@ -24,7 +19,16 @@ var typed = new Typed("#quote", {
     loop: true
 })
 
-function updateCounter (){
+function calculateDays() {
+    const originalDaysCount = 1457
+    const date1 = new Date('5/22/2022');
+    const date2 = new Date();
+    const diffTime = Math.abs(date2 - date1);
+    diffDays = originalDaysCount + Math.round(diffTime / (1000 * 60 * 60 * 24));
+    updateCounter()
+}
+
+function updateCounter() {
     const counterStart = +  showDays.innerText
     const incrementValue = diffDays / 50
     if (counterStart < diffDays) {
@@ -34,4 +38,4 @@ function updateCounter (){
         showDays.innerText = diffDays
     }
 }
-updateCounter()
+window.onload = calculateDays()
