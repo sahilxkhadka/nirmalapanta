@@ -13,18 +13,17 @@ var typed = new Typed("#quote", {
         "Sex or Rape? The difference is consent",
         "When rapists getaway, you might get married to one"
     ],
-    typeSpeed: 100,
+    typeSpeed: 50,
     BackSpeed: 60,
     fadeOut: true,
     loop: true
 })
 
 function calculateDays() {
-    const originalDaysCount = 1457
-    const date1 = new Date('5/22/2022');
+    const date1 = new Date('7/27/2018');
     const date2 = new Date();
     const diffTime = Math.abs(date2 - date1);
-    diffDays = originalDaysCount + Math.round(diffTime / (1000 * 60 * 60 * 24));
+    diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
     updateCounter()
 }
 
